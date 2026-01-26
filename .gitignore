@@ -1,0 +1,21 @@
+# IDE/工具
+.qoder/
+
+# PyInstaller 构建产物
+build/
+dist/
+*.spec
+
+# 生成的文件
+*.pptx
+*.html
+*.htm
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 临时文件
+*.tmp
+*.temp
