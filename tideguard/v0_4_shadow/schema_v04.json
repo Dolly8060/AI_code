@@ -1,0 +1,16 @@
+{
+  "title": "TideGuard Shadow Regime Overlay v0.4",
+  "type": "object",
+  "required": [
+    "shadow",
+    "interpreter"
+  ],
+  "properties": {
+    "shadow": {
+      "type": "object"
+    },
+    "interpreter": {
+      "type": "object"
+    }
+  }
+}

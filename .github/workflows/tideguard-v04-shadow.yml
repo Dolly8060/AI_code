@@ -1,0 +1,27 @@
+name: TideGuard v0.4 Shadow Tests
+
+on:
+  push:
+    paths:
+      - "tideguard/v0_4_shadow/**"
+      - ".github/workflows/tideguard-v04-shadow.yml"
+  pull_request:
+    paths:
+      - "tideguard/v0_4_shadow/**"
+      - ".github/workflows/tideguard-v04-shadow.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run deterministic shadow tests
+        working-directory: tideguard/v0_4_shadow
+        run: python -m unittest discover -s tests -v

@@ -1,0 +1,110 @@
+{
+  "shadow": {
+    "pre_reopen_state": "PRE_REOPEN_LOW",
+    "pre_reopen_quality_blocked": {
+      "blocked": true,
+      "reasons": [
+        "DURATION_COST_HIGH",
+        "SMH_HARD_FAIL"
+      ]
+    },
+    "smh_hard_fail": true,
+    "a_share_dynamic_heat": {
+      "state": "DATA_INSUFFICIENT"
+    },
+    "gld_regime_role": "REGIME_ONLY",
+    "macro_regime": {
+      "plumbing_liquidity": {
+        "state": "NORMAL",
+        "sofr_iorb_bp": 3.0,
+        "srf_usage_usd": 0.0,
+        "reserve_4w_change_pct": -1.2,
+        "valid_inputs": 3
+      },
+      "funding_cost": {
+        "state": "HIGH",
+        "percentiles": {
+          "2y": 82,
+          "10y": 85,
+          "30y": 88,
+          "tips10y": 91
+        },
+        "valid_inputs": 4
+      },
+      "duration_supply": {
+        "state": "HIGH",
+        "composite_z": 0.8,
+        "valid_inputs": 5,
+        "components": {
+          "auction_tail": 0.9,
+          "bid_to_cover_inverse": 0.7,
+          "indirect_share_inverse": 0.8,
+          "treasury_supply": 1.0,
+          "ig_issuance": 0.6
+        }
+      },
+      "duration_cost_gate": {
+        "state": "HIGH",
+        "composite_z": 0.9,
+        "valid_inputs": 4,
+        "components": {
+          "tips10y": 1.1,
+          "acm_term_premium": 0.9,
+          "30y": 0.8,
+          "duration_supply": 0.8
+        }
+      },
+      "risk_transmission": {
+        "state": "RATES_TO_EQUITY",
+        "evidence": [
+          "压力已传至股票层"
+        ]
+      },
+      "slow_regime": {
+        "state": "HIGH_DURATION_COST"
+      },
+      "fast_state": {
+        "total_state": "ORANGE",
+        "trend": "STABLE"
+      }
+    },
+    "momentum_overlay": {
+      "dxy": {
+        "slope": "FALLING",
+        "acceleration": "FLAT",
+        "raw": {
+          "change": -0.4,
+          "latest_1d_change": -0.2,
+          "previous_2d_average_change": -0.1,
+          "noise_band": 0.3
+        }
+      }
+    },
+    "ai_fundamental_overlay": {
+      "earnings_momentum": "STRONG",
+      "funding_burden": "HIGH",
+      "price_confirmation": "FAIL",
+      "last_update": "2026-07-19"
+    },
+    "proposals": []
+  },
+  "interpreter": {
+    "evidence_for": [
+      "DXY改善",
+      "信用未恶化"
+    ],
+    "evidence_against": [
+      "SMH hard-fail",
+      "Duration Cost HIGH"
+    ],
+    "dominant_driver": "AI_SEMI",
+    "invalidation_condition": [
+      "SMH连续两日确认修复"
+    ],
+    "confidence": "MEDIUM",
+    "data_dependency": [
+      "ACM term premium",
+      "Treasury auction results"
+    ]
+  }
+}

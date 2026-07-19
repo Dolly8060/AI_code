@@ -1,0 +1,60 @@
+{
+  "production_total_state": "ORANGE",
+  "production_trend": "STABLE",
+  "pre_reopen_state": "PRE_REOPEN_LOW",
+  "smh_hard_fail": true,
+  "a_share_dynamic_state": "DATA_INSUFFICIENT",
+  "a_share_structure_risk": false,
+  "sofr_iorb_bp": 3.0,
+  "srf_usage_usd": 0.0,
+  "reserve_4w_change_pct": -1.2,
+  "funding_cost_percentiles": {
+    "2y": 82,
+    "10y": 85,
+    "30y": 88,
+    "tips10y": 91
+  },
+  "duration_supply_pressure_z": {
+    "auction_tail": 0.9,
+    "bid_to_cover_inverse": 0.7,
+    "indirect_share_inverse": 0.8,
+    "treasury_supply": 1.0,
+    "ig_issuance": 0.6
+  },
+  "duration_cost_pressure_z": {
+    "tips10y": 1.1,
+    "acm_term_premium": 0.9,
+    "30y": 0.8
+  },
+  "red_tail": false,
+  "vix": 19.0,
+  "hy_oas_5d_change_bp": 4.0,
+  "hy_oas_2d_change_bp": 2.0,
+  "ai_semi_state": "FAIL",
+  "repair_pass_count": 4,
+  "a_share_state": "WARNING",
+  "momentum": {
+    "dxy": {
+      "change": -0.4,
+      "latest_1d_change": -0.2,
+      "previous_2d_average_change": -0.1,
+      "noise_band": 0.3
+    }
+  },
+  "ai_fundamentals": {
+    "revisions_pct": [3, 2.5, 2.2, 1.8, 4, 2.8],
+    "positive_share": 0.83,
+    "capex_growth_pct": [35, 40, 28, 33, 45, 30],
+    "fcf_after_capex_margin_change_pp": [-6, -7, -5, -4, -8, -6],
+    "debt_issuance_percentile": 85,
+    "net_debt_rising_share": 0.67,
+    "major_debt_issuance": true,
+    "last_update": "2026-07-19"
+  },
+  "evidence_for": ["DXY改善", "信用未恶化"],
+  "evidence_against": ["SMH hard-fail", "Duration Cost HIGH"],
+  "dominant_driver": "AI_SEMI",
+  "invalidation_condition": ["SMH连续两日确认修复"],
+  "confidence": "MEDIUM",
+  "data_dependency": ["ACM term premium", "Treasury auction results"]
+}
